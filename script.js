@@ -1,33 +1,23 @@
-$(function(){
-    zoom = $('.feature').css('background-size')
-    zoom = parseFloat(zoom)/100
-    size = zoom * $('.feature').width();
-    $(window).on('scroll', function(){
-      fromTop = $(window).scrollTop();
-      newSize = size - (fromTop/3);
-      if (newSize > $('.feature').width()) {
-          $('.feature').css({
-              '-webkit-background-size': newSize,
-              '-moz-background-size': newSize,
-              '-o-background-size': newSize,
-              'background-size': newSize,
-              '-webkit-filter':'blur('+ 0 + (fromTop/100) + 'px)',
-              'opacity': 1 - ((fromTop / $('html').height()) * 1.3)
-          });
-      }
-    });
-});
+let content = null;
+let background = null;
+let title = null;
 
-$(function (){
-    var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
-    var isSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor);
-
-    if (isChrome || isSafari) {
-    } else {
-        $('.feature').append('<div class="opaque"></div>');
-        $(window).on('scroll', function(){
-            var opacity = 0 + ($(window).scrollTop()/5000);
-            $('.opaque').css('opacity', opacity);
+window.addEventListener("load", () => {
+    content = document.querySelector(".content");
+    title = document.querySelector(".title h1");
+    background = document.querySelector(".background");
+    if (content != null) {
+        content.addEventListener("scroll", () => {
+            const scrollTop = content.scrollTop;
+            const maxScroll = content.scrollHeight - content.offsetHeight;
+        
+            const progress = Math.min(scrollTop / maxScroll, 1);
+            let pte = (progress * 1000) / maxScroll;
+            pte = pte > 0.4 ? 0.4 : pte;
+            console.log(`${pte}`);
+            title.style.transform = `scale(${1 - pte})`;
+            title.style.marginBottom = `${20-(pte*100)}vh`;
+            background.style.filter = `blur(${pte*20}px) brightness(${1 - (pte*1)})`;
         });
     }
 });
