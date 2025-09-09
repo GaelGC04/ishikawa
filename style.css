@@ -1,22 +1,158 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-body {
+
+.cuerpo-pagina {
     font-family: 'Inter', sans-serif;
-    background: linear-gradient(-45deg, #1f2937, #374151, #111827);
-    animation: degradadoAnimado 15s ease infinite;
-    color: #d1d5db;
     background-image: url('img/kaoru-ishikawa_bg.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    color: #d1d5db;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.contenedor-principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px;
+}
+
+.caja-info {
+    background-color: rgba(31, 41, 55, 0.6);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(75, 85, 99, 0.5);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 24px;
+}
+
+.seccion-principal {
+    width: 100%;
+    max-width: 1152px;
+    margin-bottom: 96px;
+}
+
+.seccion-biografia {
+    text-align: center;
+}
+
+.titulo-principal {
+    font-size: 48px;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 16px;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.subtitulo {
+    font-size: 30px;
+    font-weight: 300;
+    color: white;
+    margin-bottom: 32px;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.titulo-seccion {
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 32px;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.subtitulo-aporte,
+.subtitulo-analisis,
+.subtitulo-plan,
+.subtitulo-metricas {
+    font-size: 24px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 16px;
 }
 
 
-@keyframes degradadoAnimado {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+.parrafo-biografia,
+.parrafo-aporte,
+.parrafo-analisis,
+.parrafo-seccion {
+    font-size: 18px;
+    line-height: 1.625;
+    color: #d1d5db;
+    
+    text-align: justify;
+    hyphens: auto;
 }
+
+.parrafo-biografia + .parrafo-biografia {
+    margin-top: 16px;
+}
+
+.lista-problemas,
+.lista-plan,
+.lista-metricas {
+    list-style-type: disc;
+    padding-left: 20px;
+    color: hsl(216, 12%, 84%);
+    margin-top: 8px;
+    line-height: 1.5;
+}
+
+.lista-plan li,
+.lista-metricas li {
+    margin-top: 16px;
+}
+
+.lista-fuentes {
+    text-align: center;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.lista-fuentes a {
+    color: #d1d5db;
+    transition-property: color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+}
+
+.lista-fuentes a:hover {
+    color: #38bdf8;
+}
+
+
+.imagen-aporte,
+.imagen-herramientas {
+    border-radius: 8px;
+    width: 100%;
+    height: auto;
+    margin-top: 16px;
+}
+
+.imagen-herramientas {
+    max-width: 512px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+
+.grid-aportes,
+.grid-analisis,
+.grid-plan {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
+}
+
+.caja-revolucion {
+    grid-column: span 1;
+}
+
 
 .animacion-ocultar {
     opacity: 0;
@@ -29,19 +165,36 @@ body {
     transform: translateY(0);
 }
 
-.caja-info {
-    background-color: rgba(31, 41, 55, 0.6);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(75, 85, 99, 0.5);
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+@media (min-width: 640px) {
+    .contenedor-principal {
+        padding: 48px;
+    }
+
+    .titulo-principal {
+        font-size: 72px;
+    }
+
+    .subtitulo {
+        font-size: 36px;
+    }
+
+    .titulo-seccion {
+        font-size: 36px;
+    }
 }
 
-.titulo-principal {
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
+@media (min-width: 768px) {
+    .contenedor-principal {
+        padding: 80px;
+    }
 
-.subtitulo {
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    color: white;
+    .grid-aportes,
+    .grid-analisis,
+    .grid-plan {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .caja-revolucion {
+        grid-column: span 2;
+    }
 }
