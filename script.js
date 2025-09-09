@@ -1,21 +1,18 @@
-let content = null;
-let background = null;
-let title = null;
+document.addEventListener("DOMContentLoaded", function() {
+    const elementosAnimados = document.querySelectorAll('.animacion-ocultar');
 
-window.addEventListener("load", () => {
-    content = document.querySelector(".content");
-    title = document.querySelector(".title h1");
-    background = document.querySelector(".background");
-    if (content != null) {
-        content.addEventListener("scroll", () => {
-            const scrollTop = content.scrollTop;
-            const maxScroll = content.scrollHeight - content.offsetHeight;
-        
-            const progress = Math.min(scrollTop / maxScroll, 1);
-            let pte = (progress * 1000) / maxScroll;
-            pte = pte > 0.4 ? 0.4 : pte;
-            title.style.transform = `scale(${1 - pte})`;
-            background.style.filter = `blur(${pte*20}px) brightness(${1 - (pte*1)})`;
+    const observador = new IntersectionObserver((entradas, observador) => {
+        entradas.forEach(entrada => {
+            if (entrada.isIntersecting) {
+                entrada.target.classList.add('animacion-mostrar');
+                observador.unobserve(entrada.target);
+            }
         });
-    }
+    }, {
+        threshold: 0.1
+    });
+
+    elementosAnimados.forEach(elemento => {
+        observador.observe(elemento);
+    });
 });

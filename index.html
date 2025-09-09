@@ -1,37 +1,121 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kaoru Ishikawa</title>
-    <link rel="icon" type="image/x-icon" href="img/ishikawa_face.png">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/ishikawa_face.png" type="image/x-icon">
 </head>
-<body>
-    <div class="background"></div>
-    <div class="content">
-        <div class="initial-spacer"></div>
-        <div class="title">
-            <h1>Kaoru Ishikawa</h1>
-        </div>
-    
-        <h3>Ideales:</h3>
-        <h2>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, porro quaerat nostrum fugit quo tenetur ad deleniti necessitatibus, illo ipsa assumenda unde a tempore consequatur rem fuga, vitae quia perspiciatis.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, porro quaerat nostrum fugit quo tenetur ad deleniti necessitatibus, illo ipsa assumenda unde a tempore consequatur rem fuga, vitae quia perspiciatis.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, porro quaerat nostrum fugit quo tenetur ad deleniti necessitatibus, illo ipsa assumenda unde a tempore consequatur rem fuga, vitae quia perspiciatis.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, porro quaerat nostrum fugit quo tenetur ad deleniti necessitatibus, illo ipsa assumenda unde a tempore consequatur rem fuga, vitae quia perspiciatis.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, porro quaerat nostrum fugit quo tenetur ad deleniti necessitatibus, illo ipsa assumenda unde a tempore consequatur rem fuga, vitae quia perspiciatis.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, porro quaerat nostrum fugit quo tenetur ad deleniti necessitatibus, illo ipsa assumenda unde a tempore consequatur rem fuga, vitae quia perspiciatis.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, porro quaerat nostrum fugit quo tenetur ad deleniti necessitatibus, illo ipsa assumenda unde a tempore consequatur rem fuga, vitae quia perspiciatis.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, porro quaerat nostrum fugit quo tenetur ad deleniti necessitatibus, illo ipsa assumenda unde a tempore consequatur rem fuga, vitae quia perspiciatis.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, porro quaerat nostrum fugit quo tenetur ad deleniti necessitatibus, illo ipsa assumenda unde a tempore consequatur rem fuga, vitae quia perspiciatis.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, porro quaerat nostrum fugit quo tenetur ad deleniti necessitatibus, illo ipsa assumenda unde a tempore consequatur rem fuga, vitae quia perspiciatis.
-        </h2>
-    </div>
+<body class="overflow-x-hidden">
+    <main class="contenedorPrincipal flex flex-col items-center p-6 sm:p-12 lg:p-20">
+        <section id="seccionBiografia" class="animacion-ocultar w-full max-w-6xl text-center mb-24">
+            <h1 class="titulo-principal text-4xl sm:text-6xl font-extrabold text-white mb-4">Kaoru Ishikawa</h1>
+            <p class="subtitulo text-2xl sm:text-3xl text-gray-300 font-light mb-8">El Padre de la calidad</p>
+            <div class="caja-info p-6 sm:p-8">
+                <p class="parrafo-biografia text-lg leading-relaxed text-gray-300">Kaoru Ishikawa nació en Tokio-Japón el 13 de julio de 1915 y falleció el 16 de abril de 1989 a los 73 años. Al culminar su carrera, ingresó al mundo de la industria y luego se acercó al mundo militar. Tiempo después, ayudó a impulsar la promoción del control de calidad en las industrias, y desde ese momento comenzó a trabajar como consultor en numerosas empresas e instituciones interesadas con las estrategias de desarrollo del Japón de la posguerra.</p>
+                <p class="parrafo-biografia text-lg leading-relaxed text-gray-300 mt-4">Ejerció la docencia en el área de ingeniería. Por su buen desempeño, fue merecedor del Premio Deming y un reconocimiento de la ASQC (American Society for Quality Control). En 1960 Japón entró en la asociación internacional ISO (International Organization for Standardization), creada con el fin de establecer los estándares para las diversas empresas y productos. Ishikawa estuvo en ella hasta 1977, durante este tiempo tuvo el honor de ser el presidente de la delegación del Japón.</p>
+                <p class="parrafo-biografia text-lg leading-relaxed text-gray-300 mt-4">Fue un gran administrador, planteó una teoría del sistema de calidad, caracterizada por dos niveles el gerencial y el evolutivo. Luego, a este análisis le fue conferido el nombre de diagrama Ishikawa, contiene unos gráficos que tienen como objetivo agrupar por categorías todas las causas de los problemas.</p>
+                <p class="parrafo-biografia text-lg leading-relaxed text-gray-300 mt-4">La primera empresa que lo aplicó fue la Kawasaki Iron Fukiai Works, en 1952. Luego, del éxito rotundo de Kawasaki. Su popularidad se disparó, en ese momento, la actividad empresarial aumentó. Por ende, los consumidores japoneses encontraron productos más accesibles, de calidad y económicos. El espíritu insaciable de este oriental, generó diversos estudios y análisis para mejorar su invento.</p>
+                <p class="parrafo-biografia text-lg leading-relaxed text-gray-300 mt-4">Sus principales ideas las expresó en su libro más importante llamado ¿Qué es el control total de calidad?: la modalidad japonesa. En dicho texto expone que el Control Total de Calidad en Japón debe impactar a todos los integrantes de la empresa, desde los más altos directivos hasta los empleados más bajos. Todos tienen poder, en diferentes medidas, para impulsar la empresa.</p>
+            </div>
+        </section>
+
+        <section id="seccionAportes" class="animacion-ocultar w-full max-w-6xl mb-24">
+            <h2 class="titulo-seccion text-3xl sm:text-4xl font-bold text-white mb-8 text-center">Aportes Clave a la Calidad</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="caja-info p-6">
+                    <h3 class="subtitulo-aporte text-2xl font-semibold text-white mb-4">Círculos de Calidad</h3>
+                    <p class="parrafo-aporte text-gray-300 mb-4">Los Círculos de Calidad consistieron básicamente en reunirse con un grupo de empleados del mismo sector para discutir formas de mejorar la Calidad o solucionar problemas de SGC (Sistema de gestión de calidad). Posteriormente, el concepto adquiriría el nombre de Círculo de Control de Calidad (CCC).</p>
+                    <img id="img-circulos" src="img/img1.png" alt="Círculos de Calidad" class="rounded-lg w-full h-auto mt-4">
+                </div>
+
+                <div class="caja-info p-6">
+                    <h3 class="subtitulo-aporte text-2xl font-semibold text-white mb-4">Diagrama de Causa y Efecto</h3>
+                    <p class="parrafo-aporte text-gray-300 mb-4">El diagrama de causa y efecto, también llamado diagrama de Ishikawa, diagrama de espina de pescado o diagrama 6M es la contribución más conocida de Ishikawa para la Calidad.</p>
+                    <p class="parrafo-aporte text-gray-300 mb-4">Su repercusión se debe principalmente a que la herramienta se desarrolló de forma que cualquiera pudiera utilizarla, prescindiendo así de la necesidad de un especialista. Otro factor importante es que el diagrama es muy versátil y se puede utilizar para promover la mejora de procesos, resolver problemas, encontrar las causas raíz y, de alguna manera, incluso analizar los procesos.</p>
+                    <img id="img-diagrama" src="img/img2.png" alt="Diagrama de Causa y Efecto" class="rounded-lg w-full h-auto mt-4">
+                </div>
+
+                <div class="caja-info p-6 col-span-1 md:col-span-2">
+                    <h3 class="subtitulo-aporte text-2xl font-semibold text-white mb-4">Revolución del Pensamiento</h3>
+                    <p class="parrafo-aporte text-gray-300 mb-4">Si bien es habitual recurrir a la práctica y trabajar para que las acciones sean el centro de atención, el mayor aporte de Kaoru Ishikawa se debe a la difusión de la Filosofía de la Calidad. Hoy llamamos a esta filosofía la Cultura de la Calidad.</p>
+                    <p class="parrafo-aporte text-gray-300 mb-4">Antes de Ishikawa, la Calidad Japonesa se limitaba a aplicar técnicas americanas, lo que en sí mismo supuso un gran avance debido a las condiciones de posguerra del país. Sin embargo, con la nueva Cultura de la Calidad, Japón alcanzó niveles de Calidad incluso superiores a los estadounidenses, compitiendo en igualdad de condiciones en el mercado internacional.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="seccionHerramientas" class="animacion-ocultar w-full max-w-6xl mb-24">
+            <div class="caja-info p-6 text-center">
+                <h2 class="titulo-seccion text-3xl sm:text-4xl font-bold text-white mb-4">Organización y difusión de herramientas de calidad</h2>
+                <p class="parrafo-seccion text-gray-300 mb-4">Aunque las Herramientas de calidad ya eran conocidas e incluso utilizadas antes, Ishikawa reunió las herramientas que más se adaptaban a la realidad de las empresas, creando un conjunto que, según él, podía solucionar hasta el 95% de los problemas existentes. Este conjunto de técnicas recopiladas por él se conoció como Las 7 herramientas de calidad y se utilizan ampliamente en la actualidad.</p>
+                <img id="img-herramientas" src="img/img3.png" alt="Las 7 herramientas de calidad" class="rounded-lg w-full h-auto mx-auto mt-4 max-w-lg">
+            </div>
+        </section>
+
+        <section id="seccionAnalisis" class="animacion-ocultar w-full max-w-6xl mb-24">
+            <h2 class="titulo-seccion text-3xl sm:text-4xl font-bold text-white mb-8 text-center">Análisis del Caso de Estudio</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="caja-info p-6">
+                    <h3 class="subtitulo-analisis text-2xl font-semibold text-white mb-4">El Problema del Sistema</h3>
+                    <p class="parrafo-analisis text-gray-300 mb-2">Problemas del anterior sistema:</p>
+                    <ul class="lista-problemas list-disc list-inside text-gray-300">
+                        <li>No había contraseña para entrar a cargar materia.</li>
+                        <li>Rechazo general de carga por tener una materia llena.</li>
+                        <li>No avisaba cuando se empalmaban materias.</li>
+                        <li>Al hacer la carga no había manera de modificarla después de enviarla.</li>
+                        <li>No llevaba un seguimiento de las materias que debes de llevar y dar una recomendación de esas primero que cualquier otra.</li>
+                        <li>La interfaz era poco atractiva y no era responsiva ya que en teléfonos el contenido se deformaba. Estaba pensada solo para navegadores de PC.</li>
+                    </ul>
+                </div>
+                <div class="caja-info p-6">
+                    <h3 class="subtitulo-analisis text-2xl font-semibold text-white mb-4">Relación con la Filosofía de Ishikawa</h3>
+                    <p class="parrafo-analisis text-gray-300 mb-4">La filosofía de Ishikawa se enfoca en la calidad total y en la participación de todos los involucrados, siendo que esto es ideal para el caso del sistema que falló en múltiples áreas (seguridad, diseño, lógica, etc...) y no hay una sola causa para todos esos problemas.</p>
+                    <p class="parrafo-analisis text-gray-300 mb-4">Los círculos de calidad garantizan que tanto los estudiantes como los desarrolladores colaboren en la solución, aprovechando el conocimiento de cada uno para mejorar el sistema. Además, el ciclo de mejora continua propuesto por Ishikawa (planificar, hacer, verificar, actuar) asegura que no solo se parchen los errores actuales, sino que se construya un proceso de desarrollo más sólido para el sistema a largo plazo.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Plan de Acción y Métricas -->
+        <section id="seccionPlan" class="animacion-ocultar w-full max-w-6xl mb-24">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="caja-info p-6">
+                    <h3 class="subtitulo-plan text-2xl font-semibold text-white mb-4">Plan de Acción Paso a Paso</h3>
+                    <ul class="lista-plan list-decimal list-inside text-gray-300 space-y-4">
+                        <li>- Fijar metas y equipo de trabajo: Definir objetivos de calidad y formar un círculo de calidad con estudiantes y personal técnico.</li>
+                        <li>- Identificar causas raíz con el equipo: Usar el "Diagrama de Ishikawa" para cada gran problema, realizando lluvias de ideas sobre causas en categorías como Métodos, Máquina, Mano de obra, etc.</li>
+                        <li>- Proponer soluciones concretas: Definir acciones correctivas como un login robusto, rediseño adaptable de la interfaz, validaciones de horarios y seguimiento de materias.</li>
+                        <li>- Aplicar las soluciones en ciclos pequeños: Prototipar los cambios más críticos, probarlos con usuarios y pasar a las siguientes mejoras. Verificar con pruebas y retroalimentación.</li>
+                        <li>- Control y ajustes: Medir los indicadores clave después de cada cambio y ajustar el plan si no se obtienen los resultados esperados.</li>
+                        <li>- Mejora continua: Establecer revisiones periódicas del sistema y del proceso de calidad para mantener una cultura de calidad a largo plazo.</li>
+                    </ul>
+                </div>
+                <div class="caja-info p-6">
+                    <h3 class="subtitulo-metricas text-2xl font-semibold text-white mb-4">Métricas de Éxito</h3>
+                    <ul class="lista-metricas list-disc list-inside text-gray-300 space-y-2">
+                        <li>Disminución de ingresos a cargas de alumnos no autorizados.</li>
+                        <li>Disminución de ingresos antes de tiempo permitido a la carga.</li>
+                        <li>Satisfacción de los alumnos y personal administrativo.</li>
+                        <li>Tasa de éxito de carga de materias.</li>
+                        <li>Menor cantidad de materias empalmadas en cuestión de horas de clase.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Fuentes -->
+        <section id="seccionFuentes" class="animacion-ocultar w-full max-w-6xl text-center">
+            <h2 class="titulo-seccion text-3xl sm:text-4xl font-bold text-white mb-8">Fuentes de Información</h2>
+            <div class="caja-info p-6">
+                <ul class="lista-fuentes text-gray-300 space-y-2">
+                    <li><a href="https://blogdelacalidad.com/gurus-de-la-calidad-kaoru-ishikawa/" target="_blank" class="hover:text-sky-400 transition-colors duration-300">https://blogdelacalidad.com/gurus-de-la-calidad-kaoru-ishikawa/</a></li>
+                    <li><a href="https://blog.lifeqisystem.com/kaoru-ishikawa" target="_blank" class="hover:text-sky-400 transition-colors duration-300">https://blog.lifeqisystem.com/kaoru-ishikawa</a></li>
+                    <li><a href="https://www.ingenieriadecalidad.com/2023/02/kaoru-ishikawa-bibliografia-y-aportes.html" target="_blank" class="hover:text-sky-400 transition-colors duration-300">https://www.ingenieriadecalidad.com/2023/02/kaoru-ishikawa-bibliografia-y-aportes.html</a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
 
     <script src="script.js"></script>
 </body>
