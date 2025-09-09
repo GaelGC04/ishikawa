@@ -36,6 +36,9 @@
 }
 
 .seccion-principal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     width: 100%;
     max-width: 1152px;
     margin-bottom: 96px;
@@ -154,8 +157,17 @@
     gap: 48px;
 }
 
+.caja-efecto {
+    width: 100%;
+    margin: 80px 0;
+}
+
 .caja-revolucion {
     grid-column: span 1;
+}
+
+.info-titulo {
+    width: 100%;
 }
 
 
@@ -202,4 +214,8 @@
     .caja-revolucion {
         grid-column: span 2;
     }
+}
+
+.lista-integrantes {
+    text-align: start;
 }
