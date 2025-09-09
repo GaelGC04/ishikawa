@@ -30,6 +30,11 @@
     padding: 24px;
 }
 
+.ishikawa-diagram {
+    border-radius: 20px;
+    margin-bottom: 80px;
+}
+
 .seccion-principal {
     width: 100%;
     max-width: 1152px;
